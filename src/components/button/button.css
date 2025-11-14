@@ -1,0 +1,16 @@
+.btn-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.common-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

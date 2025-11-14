@@ -1,0 +1,53 @@
+.marquee_section {
+  overflow: hidden;
+  width: 100%;
+  background: #282828;
+  padding: 20px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.marquee {
+  display: flex;
+  gap: 50px;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee2 {
+  display: flex;
+  gap: 50px;
+  animation: marquee2 20s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.marquee_item img {
+  width: 150px; /* adjust size */
+  height: auto;
+}
+
+/* Pause on hover */
+.marquee_section:hover .marquee,
+.marquee_section:hover .marquee2 {
+  animation-play-state: paused;
+}
+
+/* Infinite loop keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

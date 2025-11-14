@@ -1,0 +1,145 @@
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  margin-top: 20px;
+  padding-bottom: 150px;
+}
+.grid__card1 {
+  background: #0e0e0e;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right__grid p {
+  color: #505050;
+}
+.grid-card_top {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+  border-radius: 15px;
+  background: #232323;
+}
+.right__grid {
+  display: grid;
+  gap: 20px;
+}
+.left__grid {
+  display: grid;
+  gap: 20px;
+}
+.grid-card_bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.grid-card4 {
+  background: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 47px 0px; */
+  height: 100%;
+  border-radius: 15px;
+  gap: 10px;
+  padding: 50px 0px;
+}
+.grid-card5 {
+  background: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 47px 0px; */
+  height: 100%;
+  border-radius: 15px;
+  padding: 50px 0px;
+  gap: 5px;
+}
+/* Common card hover effect */
+.grid__card1,
+.grid-card4,
+.grid-card5,
+.grid-card_top {
+  position: relative; /* needed for ::after */
+  overflow: hidden; /* keep shine inside */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Light shine effect */
+.grid__card1::after,
+.grid-card4::after,
+.grid-card5::after,
+.grid-card_top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.1)
+  );
+  transform: skewX(-20deg);
+  transition: 0.6s ease;
+  pointer-events: none;
+}
+
+/* Hover state */
+.grid__card1:hover,
+.grid-card4:hover,
+.grid-card5:hover,
+.grid-card_top:hover {
+  transform: translateY(-3px);
+}
+
+.grid__card1:hover::after,
+.grid-card4:hover::after,
+.grid-card5:hover::after,
+.grid-card_top:hover::after {
+  left: 120%; /* shine moves across card */
+}
+
+/* Optional: smooth transition for p or logos inside */
+.grid__card1 p,
+.grid-card4 p,
+.grid-card5 p,
+.grid-card_top p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  .grid-card_bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  .grid-card_bottom {
+    grid-template-columns: 1fr;
+  }
+}
