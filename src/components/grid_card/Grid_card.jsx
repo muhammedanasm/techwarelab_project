@@ -15,26 +15,46 @@ const Grid_card = () => {
   return (
     <div>
       <div className="container">
-        <div className="grid-cards" data-aos="fade-up" data-aos-duration="3000">
+        <div className="grid-cards">
           <div className="left__grid">
-            <div className="grid__card1">
+            <div
+              className="grid__card1"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <img src={card1} alt="" />
             </div>
-            <div className="grid__card1">
+            <div
+              className="grid__card1"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <img src={card2} alt="" />
             </div>
           </div>
           <div className="right__grid">
-            <div className="grid-card_top">
+            <div
+              className="grid-card_top"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <img src={card3} alt="" />
               <p>Logoipsum</p>
             </div>
             <div className="grid-card_bottom">
-              <div className="grid-card4">
+              <div
+                className="grid-card4"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
                 <img src={card4} alt="" />
                 <p>Logoipsum</p>
               </div>
-              <div className="grid-card5">
+              <div
+                className="grid-card5"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
                 <img src={card5} alt="" />
                 <p>Logoipsum</p>
               </div>
